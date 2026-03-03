@@ -1,18 +1,15 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5233/api",
+  baseURL: "https://training-tracker-api.onrender.com/api",
 });
 
-// 🔐 Attach token on EVERY request
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
-
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-
     return config;
   },
   (error) => Promise.reject(error)
