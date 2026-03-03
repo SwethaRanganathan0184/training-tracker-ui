@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', 'Segoe UI', serif;
+  background-color: #f8fdf6;
+  color: #2d4a3e;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #2d4a3e;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+a {
+  color: #7d9b76;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2d4a3e;
+  text-decoration: underline;
+}
+
+/* ── Page wrapper ── */
+.page {
+  padding: 36px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.card {
+  background: #edf4eb;
+  border-radius: 14px;
+  padding: 28px 32px;
+  box-shadow: 0 2px 16px rgba(45, 74, 62, 0.08);
+  border: 1px solid #c8ddc4;
+  margin-bottom: 24px;
+}
+
+/* ── Form elements ── */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7c6e;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1.5px solid #c8ddc4;
+  border-radius: 8px;
+  background: #f8fdf6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  color: #2d4a3e;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #7d9b76;
+  box-shadow: 0 0 0 3px rgba(125, 155, 118, 0.18);
+}
+
+.form-group input::placeholder {
+  color: #a8c5a0;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: #2d4a3e;
+  color: #f8fdf6;
+}
+
+.btn-success {
+  background-color: #0c1f08;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #7a6e5f;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #2d4a3e;
+  border: 2px solid #2d4a3e;
+}
+
+.btn-outline.active,
+.btn-outline:hover {
+  background-color: #2d4a3e;
+  color: #f8fdf6;
+}
+
+/* ── Table ── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.table thead tr {
+  background-color: #daeeda;
+}
+
+.table th {
+  padding: 13px 16px;
+  text-align: left;
+  font-weight: 700;
+  color: #6b7c6e;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 2px solid #c8ddc4;
+}
+
+.table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #e2efe0;
+  color: #2d4a3e;
+}
+
+.table tbody tr:hover {
+  background-color: #edf7eb;
+}
+
+.table .empty-row td {
+  text-align: center;
+  padding: 32px;
+  color: #a8c5a0;
+  font-style: italic;
+}
+
+/* ── Progress bar ── */
+.progress-wrap {
+  width: 100%;
+}
+
+.progress-track {
+  width: 100%;
+  background-color: #c8ddc4;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.progress-fill.low  { background-color: #a8c5a0; }
+.progress-fill.mid  { background-color: #7d9b76; }
+.progress-fill.high { background-color: #2d4a3e; }
+
+.progress-label {
+  font-size: 12px;
+  color: #6b7c6e;
+  margin-top: 4px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Status badges ── */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.badge-success {
+  background-color: #d4edda;
+  color: #2d4a3e;
+}
+
+.badge-warning {
+  background-color: #fef9e7;
+  color: #7d6608;
+}
+
+/* ── Auth pages ── */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c8ddc4 0%, #e2f0df 50%, #f8fdf6 100%);
+}
+
+.auth-card {
+  background: #f8fdf6;
+  border-radius: 18px;
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 24px 64px rgba(45, 74, 62, 0.3);
+  border: 1px solid #c8ddc4;
+}
+
+.auth-card h2 {
+  margin-bottom: 6px;
+  font-size: 26px;
+  color: #2d4a3e;
+}
+
+.auth-card p.subtitle {
+  color: #6b7c6e;
+  font-size: 13px;
+  margin-bottom: 28px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Navbar ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 36px;
+  height: 62px;
+  background-color: #2d4a3e;
+  box-shadow: 0 2px 12px rgba(45, 74, 62, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  color: #edf4eb;
+  margin-right: auto;
+  letter-spacing: 0.5px;
+}
+
+.navbar a {
+  color: #a8c5a0;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 6px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background-color: rgba(168, 197, 160, 0.15);
+  color: #f8fdf6;
+  text-decoration: none;
+}
+
+/* ── Alerts ── */
+.alert {
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #2d4a3e;
+  border: 1px solid #a8c5a0;
+}
+
+.alert-error {
+  background-color: #fde8e8;
+  color: #7a3e3e;
+  border: 1px solid #f5c6c6;
+}
+
+/* ── Dept tabs ── */
+.dept-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+/* ── Page header row ── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  font-size: 22px;
+}
