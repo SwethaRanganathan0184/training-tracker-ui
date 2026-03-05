@@ -26,7 +26,7 @@ function RegisterPage() {
 
   return (
     <div className="auth-wrapper">
-      <h1 style={{ textAlign: "center", marginBottom: "24px", fontSize: "28px", fontWeight: "700", color: "#2d4a3e" }}>
+      <h1 className="auth-title">Training Tracker</h1>
         Training Tracker
       </h1>
       <div className="auth-card">
