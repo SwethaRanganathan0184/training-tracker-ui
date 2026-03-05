@@ -26,10 +26,12 @@ function RegisterPage() {
 
   return (
     <div className="auth-wrapper">
+      <h1 style={{ textAlign: "center", marginBottom: "24px", fontSize: "28px", fontWeight: "700", color: "#2d4a3e" }}>
+        Training Tracker
+      </h1>
       <div className="auth-card">
         <h2>Create Account</h2>
         <p className="subtitle">Use the email your admin registered you with</p>
-
         <div className="form-group">
           <label>Email</label>
           <input
@@ -38,7 +40,6 @@ function RegisterPage() {
             placeholder="you@company.com"
           />
         </div>
-
         <div className="form-group">
           <label>Password</label>
           <input
@@ -49,14 +50,11 @@ function RegisterPage() {
             onKeyDown={(e) => e.key === "Enter" && handleRegister()}
           />
         </div>
-
         <button className="btn btn-primary" style={{ width: "100%" }} onClick={handleRegister}>
           Create Account
         </button>
-
         {status && <div className="alert alert-success">{status}</div>}
         {error && <div className="alert alert-error">{error}</div>}
-
         <p style={{ marginTop: "22px", fontSize: "13px", textAlign: "center", color: "#7d6048", fontFamily: "Segoe UI, sans-serif" }}>
           Already have an account? <Link to="/login">Login here</Link>
         </p>
