@@ -23,10 +23,12 @@ function LoginPage() {
 
   return (
     <div className="auth-wrapper">
+      <h1 style={{ textAlign: "center", marginBottom: "24px", fontSize: "28px", fontWeight: "700", color: "#2d4a3e" }}>
+        Training Tracker
+      </h1>
       <div className="auth-card">
         <h2>Welcome</h2>
         <p className="subtitle">Sign in to continue your training journey</p>
-
         <div className="form-group">
           <label>Email</label>
           <input
@@ -35,7 +37,6 @@ function LoginPage() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-
         <div className="form-group">
           <label>Password</label>
           <input
@@ -46,13 +47,10 @@ function LoginPage() {
             onKeyDown={(e) => e.key === "Enter" && handleLogin()}
           />
         </div>
-
         <button className="btn btn-primary" style={{ width: "100%" }} onClick={handleLogin}>
           Sign In
         </button>
-
         {status && <div className="alert alert-error">{status}</div>}
-
         <p style={{ marginTop: "22px", fontSize: "13px", textAlign: "center", color: "#7d6048", fontFamily: "Segoe UI, sans-serif" }}>
           New employee? <Link to="/register">Register here</Link>
         </p>
