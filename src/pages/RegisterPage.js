@@ -27,8 +27,6 @@ function RegisterPage() {
   return (
     <div className="auth-wrapper">
       <h1 className="auth-title">Training Tracker</h1>
-        Training Tracker
-      </h1>
       <div className="auth-card">
         <h2>Create Account</h2>
         <p className="subtitle">Use the email your admin registered you with</p>
